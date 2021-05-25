@@ -27,7 +27,7 @@ class server1 {
 				break;
 			}
 
-			System.out.println("Request von TCPPerfClient " + connectionSocket.getInetAddress() + ":" + connectionSocket.getPort() + " empfangen. Erzeuge und sende " + clientNumberOfMegabytes + "MB ...");
+			System.out.println("Request von Client1 " + connectionSocket.getInetAddress() + ":" + connectionSocket.getPort() + " empfangen. Erzeuge und sende " + clientNumberOfMegabytes + "MB ...");
 
 			//Daten erzeugen und an Client senden
 			for (long mb = 0; mb < clientNumberOfMegabytes; mb++) {
