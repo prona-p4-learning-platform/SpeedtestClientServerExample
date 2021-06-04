@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-class client1 {
+class Client1 {
 	public static void main(String argv[]) throws Exception {
 		int serverPort = 6000;
 		String serverIP = "localhost";
@@ -17,7 +17,7 @@ class client1 {
 		long totalBytesReceived = 0;
 
 
-		if(argv.length < 2) {
+		if (argv.length < 2) {
 			System.out.println("Bitte IP und Anzahl der zu uebertragenden Megabytes angeben");
 			System.out.println("Beispiel: 'java client1 172.17.0.120 1000'");
 		} else {
@@ -40,8 +40,7 @@ class client1 {
 
 			//Daten empfangen
 			int charsRead = inFromServer.read(buffer);
-			while (charsRead != -1)
-			{
+			while (charsRead != -1) {
 				totalBytesReceived += charsRead;
 				charsRead = inFromServer.read(buffer);
 			}
@@ -53,7 +52,7 @@ class client1 {
 			System.out.println("Delay = " + duration + " ms");
 			double seconds = (duration / 1000.0);
 			double throughput = (totalBytesReceived / seconds);
-			System.out.println("Rate = " + (long)throughput + " B/s");
+			System.out.println("Rate = " + (long) throughput + " B/s");
 			clientSocket.close();
 		}
 	}
